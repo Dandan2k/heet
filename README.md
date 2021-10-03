@@ -1,2 +1,9 @@
 # Hydropower Emissions Estimation Tool (HEET)
-The HEET tool produces an estimate of the greenhouse gas (GHG) emissions from future hydropower dams.
+## What does it do?
+The HEET tool produces an estimate of the greenhouse gas (GHG) emissions from future hydropower dams. It does this using very little input from the user: the user has to provide the dam's location, its capacity, its age and its trophic state. The program then outputs the expected CO2 and CH4 emissions over an year.
+## Why is it useful?
+HEET is not the first tool of its kind. Indeed, other tools (such as the IHA's G-res tool) do the same job with frankly better accuracy. However, the point of the HEET tool is to provide users with an easy-to-use app that doesn not require extensive input. While the G-res tool needs more than 100 input fields for a complete analysis, the HEET tool only requires five. Although the current version is a prototype, further development may lead to a tool that is simple to use yet produces results of similar precision to the G-res tool outputs.
+## How to use it?
+Currently, the tool does not have a frozen version, so there is no executable to run. For now, people that want to use it need a Python interpreter to run the code themselves (e.g. can download Anaconda). The gui.py file is the one users should run to use the app. However, one must first download the srtm library (found at https://github.com/tkrajina/srtm.py).
+## Extras
+This repo also contains some other files that aren't necessary for the app to work. For instance, a regression model was trained to predict the surface area of the dams based on their capacity and altitude. The relevant code and the training examples are given in the 'regression' folder. There's also code to extract soil wetness from a database (for details check wiki) and an attempt to find the climate zone of the dam using a shapefile and the fiona and shapely libraries (this was not included in the current app version because of run time issues).
